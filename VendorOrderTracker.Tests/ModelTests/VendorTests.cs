@@ -27,9 +27,9 @@ namespace VendorOrderTracker.Tests
       // Arrange
       string name = "test Name";
       string description = "dest Description";
+      Vendor newVendor = new Vendor(name, description);
 
       //Act
-      Vendor newVendor = new Vendor(name, description);
       string testName = newVendor.Name;
 
       // Assert
@@ -42,9 +42,9 @@ namespace VendorOrderTracker.Tests
       // Arrange
       string name = "test Name";
       string description = "test Description";
+      Vendor newVendor = new Vendor(name, description);
 
       // Act
-      Vendor newVendor = new Vendor(name, description);
       string testDescription = newVendor.Description;
 
       // Assert
@@ -52,7 +52,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsAllInstancesOfVendor_VendorList()
+    public void GetAll_ReturnsAllInstancesOfVendorObject_VendorList()
     {
       // Arrange
       string name1 = "first Name";
@@ -78,16 +78,39 @@ namespace VendorOrderTracker.Tests
       string description1 = "first Description";
       string name2 = "second Name";
       string description2 = "second Description";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
 
       // Act
-      Vendor newVendor1 = new Vendor(name1, description1);
       int idResult = newVendor1.Id;
 
       //Assert
       Assert.AreEqual(1, idResult);
     }
 
-    
+    [TestMethod]
+    public void AddOrder_AssociatesAnOrdersObjectWithSpecificVendorObject_ItemList()
+    {
+
+      //Arrange
+      string orderTitle = "test Title";
+      string orderDescription = "test Description";
+      int orderPrice = 99;
+      DateTime orderDate = new DateTime(2025, 1, 1);
+      Orders newOrder = new Orders(orderTitle, orderDescription, orderPrice, orderDate);
+      List<Orders> newOrdersList = new List<Orders> { newOrder };
+
+      string vendorName = "test Name";
+      string vendorDescription = "test Description";
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      newVendor.AddOrder(newOrder);
+
+      // Act
+      List<Orders> result = newVendor.Orders;
+
+      // Assert
+      CollectionAssert.AreEqual(newOrdersList, result);
+    }
 
   }
 }
