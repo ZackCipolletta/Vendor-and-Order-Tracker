@@ -33,7 +33,8 @@ namespace VendorOrderTracker.Tests
       //Act
       Orders newOrder = new Orders(title, description, price, date);
       string titleResult = newOrder.Title;
-
+      
+      // Assert
       Assert.AreEqual(title, titleResult);
     }
 
@@ -50,6 +51,7 @@ namespace VendorOrderTracker.Tests
       Orders newOrder = new Orders(title, description, price, date);
       string descriptionResult = newOrder.Description;
 
+      // Assert
       Assert.AreEqual(description, descriptionResult);
     }
 
@@ -66,26 +68,27 @@ namespace VendorOrderTracker.Tests
       Orders newOrder = new Orders(title, description, price, date);
       int priceResult = newOrder.Price;
 
+      // Assert
       Assert.AreEqual(price, priceResult);
     }
 
 
-    // [TestMethod]
-    // public void GetAll_ReturnsItems_ItemList()
-    // {
-    //   //Arrange
-    //   string description01 = "Walk the dog";
-    //   string description02 = "Wash the dishes";
-    //   Item newItem1 = new Item(description01);
-    //   Item newItem2 = new Item(description02);
-    //   List<Item> newList = new List<Item> { newItem1, newItem2 };
+    [TestMethod]
+    public void GetOrderDate_ReturnsOrderDate_DateTime()
+    {
+      //Arrange
+      string title = "test Title";
+      string description = "test Description";
+      int price = 99;
+      DateTime date = new DateTime(2025, 1, 1);
 
-    //   //Act
-    //   List<Item> result = Item.GetAll();
+      //Act
+      Orders newOrder = new Orders(title, description, price, date);
+      DateTime dateResult = newOrder.Date;
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      // Assert
+      Assert.AreEqual(date, dateResult);
+    }
 
   }
   
