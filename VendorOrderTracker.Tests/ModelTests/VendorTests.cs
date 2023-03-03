@@ -38,7 +38,7 @@ namespace VendorOrderTracker.Tests
     public void GetVendorDescription_CreatesInstanceOfVendor_Description()
     {
       string name = "test Name";
-      string description = "dest Description";
+      string description = "test Description";
 
       Vendor newVendor = new Vendor(name, description);
 
@@ -46,6 +46,23 @@ namespace VendorOrderTracker.Tests
 
       Assert.AreEqual(description, testDescription);
     }
-  
+
+    [TestMethod]
+    public void GetAll_ReturnsAllInstancesOfVendor_VendorList()
+    {
+      string name1 = "first Name";
+      string description1 = "first Description";
+      string name2 = "second Name";
+      string description2 = "second Description";
+
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> testList = new List<Vendor> { newVendor1, newVendor2 };
+
+      List<Vendor> resultList = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(testList, resultList);
+    }
+
   }
 }
