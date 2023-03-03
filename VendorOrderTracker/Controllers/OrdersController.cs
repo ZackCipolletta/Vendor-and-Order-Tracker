@@ -1,16 +1,19 @@
-using Microsoft.AspNetCore.Mvc;
-using MusicOrganizer.Models;
 using System.Collections.Generic;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using VendorOrderTracker.Models;
+
 
 namespace MusicOrganizer.Controllers
 {
   public class OrdersController : Controller
   {
 
-    [HttpGet("/artists/{artistsId}/albums/new")] 
-    public ActionResult New()
+    [HttpGet("/vendor/{vendorId}/orders/new")] 
+    public ActionResult New(int vendorId)
     {
-      return View();
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
     }
 
 
