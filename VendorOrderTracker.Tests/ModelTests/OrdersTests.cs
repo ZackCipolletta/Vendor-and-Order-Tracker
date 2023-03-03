@@ -26,7 +26,7 @@ namespace VendorOrderTracker.Tests
     {
       //Arrange
       string title = "test Title";
-      string description = "dest Description";
+      string description = "test Description";
       int price = 99;
       DateTime date = new DateTime(2025, 1, 1);
 
@@ -42,7 +42,7 @@ namespace VendorOrderTracker.Tests
     {
       //Arrange
       string title = "test Title";
-      string description = "dest Description";
+      string description = "test Description";
       int price = 99;
       DateTime date = new DateTime(2025, 1, 1);
 
@@ -53,18 +53,22 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(description, descriptionResult);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_ItemList()
-    // {
-    //   // Arrange
-    //   List<Item> newList = new List<Item> { };
+    [TestMethod]
+    public void GetOrderPrice_ReturnsOrderPrice_String()
+    {
+      //Arrange
+      string title = "test Title";
+      string description = "test Description";
+      int price = 99;
+      DateTime date = new DateTime(2025, 1, 1);
 
-    //   // Act
-    //   List<Item> result = Item.GetAll();
+      //Act
+      Orders newOrder = new Orders(title, description, price, date);
+      int priceResult = newOrder.Price;
 
-    //   // Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      Assert.AreEqual(price, priceResult);
+    }
+
 
     // [TestMethod]
     // public void GetAll_ReturnsItems_ItemList()
