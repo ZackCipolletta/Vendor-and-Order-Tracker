@@ -1,12 +1,22 @@
-// using System.Collections.Generic;
-// using System;
-// using Microsoft.AspNetCore.Mvc;
-// using VendorOrderTracker.Models;
+using System.Collections.Generic;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using VendorOrderTracker.Models;
 
-// namespace VendorOrderTracker.Controllers
-// {
-//   public class VendorsController : Controller
-//   {
+namespace VendorOrderTracker.Controllers
+{
+  public class VendorController : Controller
+  {
+    [HttpGet("/vendor")] 
+    public ActionResult Index()
+    {
+      List<Vendor> allVendor = Vendor.GetAll();
+      return View(allVendor);
+    }
+    
+  }
+}
+
 
 //     [HttpGet("/vendors")]
 //     public ActionResult Index()
