@@ -32,26 +32,26 @@ namespace VendorOrderTracker.Tests
 
       //Act
       Orders newOrder = new Orders(title, description, price, date);
-      string result = newOrder.Title;
+      string titleResult = newOrder.Title;
 
-      Assert.AreEqual(title, result);t
+      Assert.AreEqual(title, titleResult);
     }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
+    [TestMethod]
+    public void GetOrderDescription_ReturnsOrderDescription_String()
+    {
+      //Arrange
+      string title = "test Title";
+      string description = "dest Description";
+      int price = 99;
+      DateTime date = new DateTime(2025, 1, 1);
 
-    //   //Act
-    //   string updatedDescription = "Do the dishes";
-    //   newItem.Description = updatedDescription;
-    //   string result = newItem.Description;
+      //Act
+      Orders newOrder = new Orders(title, description, price, date);
+      string descriptionResult = newOrder.Description;
 
-    //   //Assert
-    //   Assert.AreEqual(updatedDescription, result);
-    // }
+      Assert.AreEqual(description, descriptionResult);
+    }
 
     // [TestMethod]
     // public void GetAll_ReturnsEmptyList_ItemList()
