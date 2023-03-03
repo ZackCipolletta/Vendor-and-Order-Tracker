@@ -4,19 +4,19 @@ namespace VendorOrderTracker.Models
 {
   public class Orders
   {
-    public string OrderTitle { get; set; }
-    public string OrderDescription { get; set; }
-    public int OrderPrice { get; set; }
-    public DateTime OrderDate { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public int Price { get; set; }
+    public DateTime Date { get; set; }
     public int Id { get; }
     private static List<Orders> _instances = new List<Orders> { };
 // , DateTime orderDate
     public Orders(string orderTitle, string orderDescription, int orderPrice, DateTime orderDate )
     {
-      OrderTitle = orderTitle;
-      OrderDescription = orderDescription;
-      OrderPrice = orderPrice;
-      OrderDate = orderDate;
+      Title = orderTitle;
+      Description = orderDescription;
+      Price = orderPrice;
+      Date = orderDate;
       _instances.Add(this);
       Id = _instances.Count;
     }

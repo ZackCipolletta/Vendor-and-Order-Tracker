@@ -22,7 +22,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetVendorName_CreatesInstanceOfVendor_String()
+    public void GetVendorName_ReturnsVendorName_String()
     {
       string name = "test Name";
       string description = "dest Description";
@@ -35,7 +35,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetVendorDescription_CreatesInstanceOfVendor_Description()
+    public void GetVendorDescription_ReturnsVendorDescription_String()
     {
       string name = "test Name";
       string description = "test Description";
