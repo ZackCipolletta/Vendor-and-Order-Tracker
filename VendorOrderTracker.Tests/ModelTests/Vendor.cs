@@ -22,7 +22,7 @@ namespace VendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetVendorName_CreatesInstanceOfVendor_Vendor()
+    public void GetVendorName_CreatesInstanceOfVendor_String()
     {
       string name = "test Name";
       string description = "dest Description";
@@ -34,6 +34,18 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(name, testName);
     }
 
+    [TestMethod]
+    public void GetVendorDescription_CreatesInstanceOfVendor_Description()
+    {
+      string name = "test Name";
+      string description = "dest Description";
+
+      Vendor newVendor = new Vendor(name, description);
+
+      string testDescription = newVendor.Description;
+
+      Assert.AreEqual(description, testDescription);
+    }
   
   }
 }
