@@ -33,7 +33,7 @@ namespace VendorOrderTracker.Tests
       //Act
       Orders newOrder = new Orders(title, description, price, date);
       string titleResult = newOrder.Title;
-      
+
       // Assert
       Assert.AreEqual(title, titleResult);
     }
@@ -90,6 +90,24 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(date, dateResult);
     }
 
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string title = "test Title";
+      string description = "test Description";
+      int price = 99;
+      DateTime date = new DateTime(2025, 1, 1);
+
+      //Act
+      Orders newOrder1 = new Orders(title, description, price, date);
+      Orders newOrder2 = new Orders(title, description, price, date);
+      int idResult = newOrder2.Id;
+
+      // Assert
+      Assert.AreEqual(2, idResult);
+    }
+
   }
-  
+
 }

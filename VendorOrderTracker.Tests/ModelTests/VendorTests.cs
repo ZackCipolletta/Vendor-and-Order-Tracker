@@ -73,7 +73,6 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
-      //Arrange
       // Arrange
       string name1 = "first Name";
       string description1 = "first Description";
