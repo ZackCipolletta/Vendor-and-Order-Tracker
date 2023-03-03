@@ -10,7 +10,7 @@ namespace VendorOrderTracker.Models
     public DateTime Date { get; set; }
     public int Id { get; }
     private static List<Orders> _instances = new List<Orders> { };
-// , DateTime orderDate
+
     public Orders(string orderTitle, string orderDescription, int orderPrice, DateTime orderDate )
     {
       Title = orderTitle;
@@ -31,9 +31,9 @@ namespace VendorOrderTracker.Models
       _instances.Clear();
     }
 
-    // public static Orders Find(int searchId)
-    // {
-    //   return _instances[searchId - 1];
-    // }
+    public static Orders Find(int searchId)
+    {
+      return _instances[searchId - 1];
+    }
   }
 }

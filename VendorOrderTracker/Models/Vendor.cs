@@ -8,7 +8,7 @@ namespace VendorOrderTracker.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
-    // public List<Order> Orders { get; set; }
+    public List<Orders> Orders { get; set; }
 
     public Vendor(string vendorName, string vendorDescription)
     {
@@ -29,10 +29,10 @@ namespace VendorOrderTracker.Models
       return _instances;
     }
 
-    // public void AddOrder(Order order)
-    // {
-    //   Order.Add(Order);
-    // }
+    public void AddOrder(Orders order)
+    {
+      Orders.Add(order);
+    }
 
     public static Vendor Find(int searchId)
     {
