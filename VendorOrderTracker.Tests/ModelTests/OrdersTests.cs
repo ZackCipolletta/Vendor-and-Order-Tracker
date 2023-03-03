@@ -108,6 +108,31 @@ namespace VendorOrderTracker.Tests
       Assert.AreEqual(2, idResult);
     }
 
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrdersList()
+    {
+      //Arrange
+      string title1 = "test1 Title";
+      string description1 = "test1 Description";
+      int price1 = 99;
+      DateTime date1 = new DateTime(2025, 1, 1);
+      string title2 = "test2 Title";
+      string description2 = "test2 Description";
+      int price2 = 101;
+      DateTime date2 = new DateTime(2025, 1, 2);
+
+      Orders newOrder1 = new Orders(title1, description1, price1, date1);
+      Orders newOrder2 = new Orders(title2, description2, price2, date2);
+      List<Orders> newOrdersList = new List<Orders> { newOrder1, newOrder2 };
+
+      //Act
+      List<Orders> result = Orders.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newOrdersList, result);
+    }
+
   }
 
 }
