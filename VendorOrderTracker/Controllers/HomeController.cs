@@ -1,21 +1,21 @@
-using Microsoft.AspNetCore.Mvc;
+// using Microsoft.AspNetCore.Mvc;
 
-namespace VendorOrderTracker.Controllers
-{
-  public class HomeController : Controller
-  {
+// namespace VendorOrderTracker.Controllers
+// {
+//   public class HomeController : Controller
+//   {
 
-    [HttpGet("/")]
-    public ActionResult Index()
-    {
-      return View();
-    }
+//     [HttpGet("/")]
+//     public ActionResult Index()
+//     {
+//       return View();
+//     }
 
-    [Route("/favorite_photos")]
-    public ActionResult FavoritePhotos()
-    {
-      return View();
-    }
+//     [Route("/favorite_photos")]
+//     public ActionResult FavoritePhotos()
+//     {
+//       return View();
+//     }
     
-  }
-}
+//   }
+// }
