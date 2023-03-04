@@ -7,11 +7,11 @@ namespace VendorOrderTracker.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
-    public DateTime Date { get; set; }
+    public DateOnly Date { get; set; }
     public int Id { get; }
     private static List<Orders> _instances = new List<Orders> { };
 
-    public Orders(string orderTitle, string orderDescription, int orderPrice, DateTime orderDate )
+    public Orders(string orderTitle, string orderDescription, int orderPrice, DateOnly orderDate )
     {
       Title = orderTitle;
       Description = orderDescription;
