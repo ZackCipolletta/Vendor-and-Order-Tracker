@@ -1,16 +1,20 @@
   @{
   Layout = "_Layout";
 }
+<div class="container pt-2 my-5 border">
+  <h4>Vendor: @Model["vendor"].Name</h4>
+  <h5>Details: </h5>
 
-    <h1>Order Details: </h1>
+  <strong>@Model["orders"].Title</strong>
+  <ol>
+    Description: @Model["orders"].Description <br>
+    Price: $@Model["orders"].Price <br>
+    Date: @Model["orders"].Date.ToString("dd/MMM/yyyy");
+  </ol>
 
-    <h2>@Model["orders"].Title</h2>
-    <ol>
-      Description: @Model["orders"].Description
-      Price: @Model["orders"].Price
-      Date: @Model["orders"].Date.ToString("dd/MMM/yyyy");
-    </ol>
-    <h5>Vendor: @Model["vendor"].Name</h5>
 
-    <a href='/vendor/@Model["vendor"].Id/orders/new'>Add another order</a> <br>
-    <a href='/vendor'>View all vendors</a>
+  <p><a href='/vendor/@Model["vendor"].Id/orders/new'>Add another order</a></p>
+  <p><a href='/vendor'>Return to vednors list</a></p>
+  <p><a href='/'>Return to Main Page</a></p>
+
+</div>

@@ -1,16 +1,17 @@
   @{
   Layout = "_Layout";
 }
+<div class="container pt-2 my-5 border">
     <h1>Add a new vendor</h1>
-    <p>Add a new vendor here:</p>
 
     <form action="/vendor" method="post">
-      <label for="vendorName">Vendor name</label>
-      <input id="vendorName" name="vendorName" type="text"> <br> <br>
-      <label for="vendorDescription">Vendor description</label>
-      <input id="vendorDescription" name="vendorDescription" type="text"> <br> <br>
+      <P><label for="vendorName">Vendor name: </label>
+      <input id="vendorName" name="vendorName" type="text"></P>
+      <P><label for="vendorDescription">Vendor description</label>
+      <input id="vendorDescription" name="vendorDescription" type="text"></P> <br> <br>
       <button type="submit">Add Vendor</button>
     </form>
 
     <p><a href="/">Back home</a></p>
     <p><a href="/vendor">Back to vendors</a></p>
+</div>

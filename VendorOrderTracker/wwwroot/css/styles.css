@@ -1,0 +1,51 @@
+body {
+  background-image: url('../assets/currency_background.jpg' ) ;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* #amount {
+  width: 75px;
+} */
+
+/* h1 {
+  text-align: center;
+  padding: 25px;
+  background-color: #0000008b;
+} */
+
+
+.container {
+
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+} */
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+}

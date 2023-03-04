@@ -17,7 +17,7 @@ namespace VendorOrderTracker.Tests
     [TestMethod]
     public void OrdersConstructor_CreatesInstanceOfOrder_Orders()
     {
-      Orders newOrder = new Orders("test Title", "test Description", 99, new DateOnly(2025, 1, 1));
+      Orders newOrder = new Orders("test Title", "test Description", 99, new DateTime(2025, 1, 1));
       Assert.AreEqual(typeof(Orders), newOrder.GetType());
     }
 
@@ -28,7 +28,7 @@ namespace VendorOrderTracker.Tests
       string title = "test Title";
       string description = "test Description";
       int price = 99;
-      DateOnly date = new DateOnly(2025, 1, 1);
+      DateTime date = new DateTime(2025, 1, 1);
 
       //Act
       Orders newOrder = new Orders(title, description, price, date);
@@ -45,7 +45,7 @@ namespace VendorOrderTracker.Tests
       string title = "test Title";
       string description = "test Description";
       int price = 99;
-      DateOnly date = new DateOnly(2025, 1, 1);
+      DateTime date = new DateTime(2025, 1, 1);
 
       //Act
       Orders newOrder = new Orders(title, description, price, date);
@@ -62,11 +62,11 @@ namespace VendorOrderTracker.Tests
       string title = "test Title";
       string description = "test Description";
       int price = 99;
-      DateOnly date = new DateOnly(2025, 1, 1);
+      DateTime date = new DateTime(2025, 1, 1);
 
       //Act
       Orders newOrder = new Orders(title, description, price, date);
-      int priceResult = newOrder.Price;
+      float priceResult = newOrder.Price;
 
       // Assert
       Assert.AreEqual(price, priceResult);
@@ -80,11 +80,11 @@ namespace VendorOrderTracker.Tests
       string title = "test Title";
       string description = "test Description";
       int price = 99;
-      DateOnly date = new DateOnly(2025, 1, 1);
+      DateTime date = new DateTime(2025, 1, 1);
 
       //Act
       Orders newOrder = new Orders(title, description, price, date);
-      DateOnly dateResult = newOrder.Date;
+      DateTime dateResult = newOrder.Date;
 
       // Assert
       Assert.AreEqual(date, dateResult);
@@ -97,7 +97,7 @@ namespace VendorOrderTracker.Tests
       string title = "test Title";
       string description = "test Description";
       int price = 99;
-      DateOnly date = new DateOnly(2025, 1, 1);
+      DateTime date = new DateTime(2025, 1, 1);
 
       //Act
       Orders newOrder1 = new Orders(title, description, price, date);
@@ -116,11 +116,11 @@ namespace VendorOrderTracker.Tests
       string title1 = "test1 Title";
       string description1 = "test1 Description";
       int price1 = 99;
-      DateOnly date1 = new DateOnly(2025, 1, 1);
+      DateTime date1 = new DateTime(2025, 1, 1);
       string title2 = "test2 Title";
       string description2 = "test2 Description";
       int price2 = 101;
-      DateOnly date2 = new DateOnly(2025, 1, 2);
+      DateTime date2 = new DateTime(2025, 1, 2);
 
       Orders newOrder1 = new Orders(title1, description1, price1, date1);
       Orders newOrder2 = new Orders(title2, description2, price2, date2);

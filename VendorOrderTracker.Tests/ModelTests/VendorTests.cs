@@ -96,7 +96,7 @@ namespace VendorOrderTracker.Tests
       string orderTitle = "test Title";
       string orderDescription = "test Description";
       int orderPrice = 99;
-      DateOnly orderDate = new DateOnly(2025, 1, 1);
+      DateTime orderDate = new DateTime(2025, 1, 1);
       Orders newOrder = new Orders(orderTitle, orderDescription, orderPrice, orderDate);
       List<Orders> newOrdersList = new List<Orders> { newOrder };
 
