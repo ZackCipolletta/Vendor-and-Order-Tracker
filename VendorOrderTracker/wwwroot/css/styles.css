@@ -1,11 +1,11 @@
 body {
-  background-image: url('../assets/currency_background.jpg' ) ;
+  background-image: url('../img/Croissant-bg.jpg') ;
   background-color: black;
   color: white;
   font-weight: bolder;
   font-size: larger;
   background-repeat: no-repeat;
-  background-position: center center;
+  /* background-position: center center; */
   background-size: cover;
 }
 
@@ -25,6 +25,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.541);
 }
 
 .vendorDescription {
