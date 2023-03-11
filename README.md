@@ -20,6 +20,7 @@ This web application is a vendor and order tracker built using C#.  The user has
 2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "VendorOrderTracker".
 3. In the command line, run the command "dotnet run" to compile and execute the site in a new browser window.
 4. Optionally, you can run "dotnet build" to compile the app without running it.
+5. In order to test the each function in this project, navigate to VendorOrderTracker.Tests in the command line and enter "dotnet test".
 
 ## Known Bugs
 
